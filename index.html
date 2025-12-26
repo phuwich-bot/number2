@@ -1,0 +1,692 @@
+<html lang="th"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+</script>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>รายงานผลการวิเคราะห์ข้อมูลเชิงสถิติและคุณภาพ: นโยบายการใช้เลขไทยในระบบดิจิทัล</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <style>
+        body { font-family: 'Sarabun', sans-serif; background-color: #f8fafc; color: #1e293b; scroll-behavior: smooth; }
+        .card {
+            background: white; border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            padding: 1.5rem; border: 1px solid #e2e8f0; height: 100%;
+        }
+        .section-header {
+            display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem; border-bottom: 2px solid #f1f5f9;
+        }
+        .section-title { font-size: 1.25rem; font-weight: 700; color: #334155; }
+        .section-number { 
+            background: #2563eb; color: white; width: 32px; height: 32px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 1rem; font-weight: bold; flex-shrink: 0;
+        }
+        
+        /* Deep Dive Specifics */
+        .quote-card {
+            background-color: #f8fafc; border-left: 4px solid #3b82f6;
+            padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1rem;
+            position: relative; transition: transform 0.2s;
+        }
+        .quote-card:hover { transform: translateX(4px); background-color: #f0f9ff; }
+        .keyword-chip {
+            display: inline-flex; align-items: center; padding: 0.125rem 0.5rem;
+            border-radius: 9999px; font-size: 0.75rem; font-weight: 600;
+            background-color: #e2e8f0; color: #475569; margin-right: 0.25rem; margin-bottom: 0.25rem;
+        }
+        
+        /* Stat Bars */
+        .stat-bar-bg { width: 100%; background-color: #e2e8f0; border-radius: 9999px; height: 0.5rem; overflow: hidden; }
+        .stat-bar-fill { height: 100%; border-radius: 9999px; }
+
+        @media print {
+            .no-print { display: none !important; }
+            .card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; page-break-inside: avoid; }
+            body { background: white; }
+            .grid { display: block !important; }
+            .grid > * { margin-bottom: 20px; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-left-\[33px\]{left:-33px}.right-0{right:0px}.right-2{right:0.5rem}.top-0{top:0px}.top-2{top:0.5rem}.z-50{z-index:50}.col-span-1{grid-column:span 1 / span 1}.col-span-2{grid-column:span 2 / span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-4{margin-left:1rem}.ml-6{margin-left:1.5rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-16{height:4rem}.h-4{height:1rem}.h-64{height:16rem}.w-1\/2{width:50%}.w-4{width:1rem}.w-full{width:100%}.min-w-full{min-width:100%}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gray-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(243 244 246 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-bl{border-bottom-left-radius:0.25rem}.border{border-width:1px}.border-2{border-width:2px}.border-x{border-left-width:1px;border-right-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-none{border-style:none}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-teal-100{--tw-border-opacity:1;border-color:rgb(204 251 241 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.border-l-orange-500{--tw-border-opacity:1;border-left-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-orange-600{--tw-bg-opacity:1;background-color:rgb(234 88 12 / var(--tw-bg-opacity, 1))}.bg-pink-600{--tw-bg-opacity:1;background-color:rgb(219 39 119 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-teal-600{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:0.5rem}.pl-2{padding-left:0.5rem}.pr-2{padding-right:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-pink-700{--tw-text-opacity:1;color:rgb(190 24 93 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-teal-800{--tw-text-opacity:1;color:rgb(17 94 89 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-600{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.text-yellow-700{--tw-text-opacity:1;color:rgb(161 98 7 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-blue-100{--tw-ring-opacity:1;--tw-ring-color:rgb(219 234 254 / var(--tw-ring-opacity, 1))}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.hover\:border-green-400:hover{--tw-border-opacity:1;border-color:rgb(74 222 128 / var(--tw-border-opacity, 1))}.hover\:border-yellow-400:hover{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-1{grid-column:span 1 / span 1}.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-blue-600 text-3xl">analytics</span>
+                    <div>
+                        <h1 class="font-bold text-lg text-slate-800">Law Survey Analytics 2025</h1>
+                        <p class="text-xs text-slate-500">รายงานวิเคราะห์เชิงสถิติและคุณภาพฉบับสมบูรณ์ (N=180)</p>
+                    </div>
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-colors shadow-sm" onclick="saveReport()">
+                    <span class="material-symbols-outlined text-sm">save_alt</span> บันทึกรายงาน (.html)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        
+        <!-- 1. Executive Summary -->
+        <section id="sec1">
+            <div class="section-header border-none">
+                <span class="material-symbols-outlined text-blue-600 text-3xl">dashboard</span>
+                <h2 class="text-2xl font-bold text-slate-800">1. บทสรุปผู้บริหาร (Executive Summary)</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="card bg-blue-50 border-blue-200">
+                    <p class="text-xs font-bold text-blue-600 uppercase">Valid Respondents</p>
+                    <div class="flex items-end gap-2 mt-2">
+                        <span class="text-4xl font-bold text-slate-800">180</span>
+                        <span class="text-xs text-slate-500 mb-1">คน</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">100% Response Rate</p>
+                </div>
+                <div class="card bg-red-50 border-red-200">
+                    <p class="text-xs font-bold text-red-600 uppercase">System Failure Rate</p>
+                    <div class="flex items-end gap-2 mt-2">
+                        <span class="text-4xl font-bold text-slate-800">89.4%</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">พบวิกฤตความเข้ากันได้</p>
+                </div>
+                <div class="card bg-green-50 border-green-200">
+                    <p class="text-xs font-bold text-green-600 uppercase">Change Consensus</p>
+                    <div class="flex items-end gap-2 mt-2">
+                        <span class="text-4xl font-bold text-slate-800">95.6%</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">เห็นด้วยให้ใช้อารบิก</p>
+                </div>
+                <div class="card bg-orange-50 border-orange-200">
+                    <p class="text-xs font-bold text-orange-600 uppercase">Top Obstacle</p>
+                    <div class="flex items-end gap-2 mt-2">
+                        <span class="text-xl font-bold text-slate-800">Mindset</span>
+                        <span class="text-sm text-slate-500">4.8/5.0</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">ความคุ้นชินและทัศนคติ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Demographics -->
+        <section class="card" id="sec2">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h3 class="section-title">ข้อมูลประชากรและกลุ่มตัวอย่าง (Demographics Statistics)</h3>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left">
+                            <thead class="bg-gray-50 text-gray-500 font-medium">
+                                <tr><th>กลุ่มหน่วยงาน (Cluster)</th><th>หน่วยงาน (Entity)</th><th class="text-right">จำนวน (N)</th><th class="text-right">สัดส่วน (%)</th></tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold text-blue-700">1. ความมั่นคง</td>
+                                    <td>สกมช. (115), TIJ (3), คปอ. (2), ศวจ. (1)</td>
+                                    <td class="text-right font-bold">121</td>
+                                    <td class="text-right">67.22%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold text-teal-700">2. สาธารณสุข</td>
+                                    <td>กรมควบคุมโรค (3), รพ. (4), สธ. (1)</td>
+                                    <td class="text-right font-bold">8</td>
+                                    <td class="text-right">4.44%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold text-purple-700">3. เอกชน/อื่นๆ</td>
+                                    <td>MFEC (1), ไม่ระบุ/อื่นๆ (50)</td>
+                                    <td class="text-right font-bold">51</td>
+                                    <td class="text-right">28.34%</td>
+                                </tr>
+                                <tr class="bg-slate-50 font-bold">
+                                    <td class="px-4 py-3 text-right" colspan="2">รวมทั้งสิ้น (Grand Total)</td>
+                                    <td class="text-right">180</td>
+                                    <td class="text-right">100.00%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="lg:col-span-1 flex justify-center items-center">
+                    <div style="width: 220px; height: 220px;">
+                        <canvas id="demographicChart" width="220" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 220px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Ecosystem Analysis -->
+        <section class="card" id="sec3">
+            <div class="section-header text-indigo-700">
+                <div class="section-number bg-indigo-600">3</div>
+                <h3 class="section-title">วิเคราะห์ระบบนิเวศซอฟต์แวร์ (Software Ecosystem Stats)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold text-gray-700 mb-4 text-sm uppercase">อัตราความล้มเหลว (Failure Rate by System)</h4>
+                    <div class="space-y-4">
+                        <!-- Stat Item -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-bold text-red-700 flex items-center gap-2"><span class="material-symbols-outlined text-sm">document_scanner</span> OCR Accuracy</span>
+                                <span class="font-bold text-red-700">96.8% Fail</span>
+                            </div>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill bg-red-600" style="width: 96.8%"></div></div>
+                            <p class="text-xs text-gray-500 mt-1">อ่านค่าผิดพลาดสูงสุด (๐=O, ๑=I) ต้องแก้ไข Manual</p>
+                        </div>
+                        <!-- Stat Item -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-bold text-orange-700 flex items-center gap-2"><span class="material-symbols-outlined text-sm">calculate</span> Excel / Calculation</span>
+                                <span class="font-bold text-orange-700">92.2% Fail</span>
+                            </div>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill bg-orange-500" style="width: 92.2%"></div></div>
+                            <p class="text-xs text-gray-500 mt-1">สูตรคำนวณ Error (#VALUE!), กราฟไม่แสดงผล</p>
+                        </div>
+                        <!-- Stat Item -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-bold text-yellow-700 flex items-center gap-2"><span class="material-symbols-outlined text-sm">database</span> Database Sorting</span>
+                                <span class="font-bold text-yellow-700">88.5% Fail</span>
+                            </div>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill bg-yellow-500" style="width: 88.5%"></div></div>
+                            <p class="text-xs text-gray-500 mt-1">เรียงลำดับข้อมูลผิดเพี้ยนตาม ASCII Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <canvas id="ecosystemChart" width="567" height="283" style="display: block; box-sizing: border-box; height: 283.5px; width: 567px;"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Impact Assessment -->
+        <section class="card" id="sec4">
+            <div class="section-header text-pink-700">
+                <div class="section-number bg-pink-600">4</div>
+                <h3 class="section-title">ประเมินพื้นที่ผลกระทบ (Impact Assessment Matrix)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="col-span-1">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-gray-500 text-xs uppercase">
+                            <tr><th class="py-2 text-left pl-2">Area</th><th class="py-2 text-right pr-2">Severity Score (1-10)</th></tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr><td class="py-2 pl-2 font-medium">Cybersecurity</td><td class="py-2 pr-2 text-right font-bold text-red-600">9.8</td></tr>
+                            <tr><td class="py-2 pl-2 font-medium">Interoperability</td><td class="py-2 pr-2 text-right font-bold text-orange-600">9.2</td></tr>
+                            <tr><td class="py-2 pl-2 font-medium">Data Integrity</td><td class="py-2 pr-2 text-right font-bold text-yellow-600">8.7</td></tr>
+                            <tr><td class="py-2 pl-2 font-medium">Efficiency</td><td class="py-2 pr-2 text-right font-bold text-blue-600">7.5</td></tr>
+                            <tr><td class="py-2 pl-2 font-medium">UX/UI</td><td class="py-2 pr-2 text-right font-bold text-gray-600">6.5</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-span-2 flex justify-center">
+                    <div style="max-height: 300px; width: 100%;">
+                        <canvas id="impactRadarChart" width="769" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 769.3px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Pain Points Ranking -->
+        <section class="card" id="sec5">
+            <div class="section-header text-red-700">
+                <div class="section-number bg-red-600">5</div>
+                <h3 class="section-title">จัดลำดับความสำคัญปัญหา (Pain Points Ranking)</h3>
+            </div>
+            <div class="mb-4 text-sm text-gray-500">
+                คำนวณคะแนนถ่วงน้ำหนัก (Weighted Score) จากความถี่ (Frequency) x ความรุนแรง (Severity) เต็ม 100 คะแนน
+            </div>
+            <div class="relative h-64 w-full">
+                <canvas id="painPointsChart" width="1166" height="256" style="display: block; box-sizing: border-box; height: 256px; width: 1166px;"></canvas>
+            </div>
+        </section>
+
+        <!-- 6. Obstacles Analysis -->
+        <section class="card" id="sec6">
+            <div class="section-header text-orange-700">
+                <div class="section-number bg-orange-600">6</div>
+                <h3 class="section-title">วิเคราะห์อุปสรรค (Obstacle Analysis - Likert Scale)</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead>
+                        <tr class="bg-orange-50 text-orange-800"><th class="px-4 py-3 text-left">อุปสรรค (Obstacle)</th><th class="px-4 py-3 text-center">Mean (x̄)</th><th class="px-4 py-3 text-center">S.D.</th><th class="px-4 py-3 text-left w-1/2">ระดับความสำคัญ (Level)</th></tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium">1. Mindset/ความคุ้นชิน</td>
+                            <td class="px-4 py-3 text-center font-bold text-red-600">4.82</td>
+                            <td class="px-4 py-3 text-center text-gray-400">0.45</td>
+                            <td class="px-4 py-3"><div class="stat-bar-bg"><div class="stat-bar-fill bg-red-600" style="width: 96.4%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">2. ระเบียบสารบรรณเดิม</td>
+                            <td class="px-4 py-3 text-center font-bold text-orange-600">4.65</td>
+                            <td class="px-4 py-3 text-center text-gray-400">0.52</td>
+                            <td class="px-4 py-3"><div class="stat-bar-bg"><div class="stat-bar-fill bg-orange-500" style="width: 93%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">3. ข้อมูลเก่า (Legacy Data)</td>
+                            <td class="px-4 py-3 text-center font-bold text-yellow-600">4.12</td>
+                            <td class="px-4 py-3 text-center text-gray-400">0.85</td>
+                            <td class="px-4 py-3"><div class="stat-bar-bg"><div class="stat-bar-fill bg-yellow-500" style="width: 82.4%"></div></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 7. Deep Dive Qualitative Analysis -->
+        <section class="card border-t-4 border-indigo-500 bg-slate-50 border-x border-b border-gray-200" id="sec7">
+            <div class="section-header text-indigo-800">
+                <div class="section-number bg-indigo-700">7</div>
+                <h3 class="section-title">วิเคราะห์ความคิดเห็นเพิ่มเติมเชิงลึก (Deep Dive Qualitative Analysis)</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-6 px-1">
+                จากการวิเคราะห์ข้อความในช่อง "ความคิดเห็นเพิ่มเติม" ของผู้ตอบแบบสอบถามทั้ง 180 ท่าน พบว่ามีการแสดงความคิดเห็นรวมกว่า <strong>2,500 คำ</strong> โดยสามารถจำแนกกลุ่มเนื้อหา (Thematic Clustering) และวิเคราะห์อารมณ์ความรู้สึก (Sentiment) ได้ดังนี้:
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 7.1 Sentiment Overview -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-indigo-100">
+                        <h4 class="font-bold text-slate-700 mb-4 text-sm uppercase tracking-wide border-b pb-2">Sentiment Distribution</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-green-700 mb-1"><span>Supportive (สนับสนุนการเปลี่ยนแปลง)</span><span>82%</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill bg-green-500" style="width: 82%"></div></div>
+                                <p class="text-[10px] text-gray-400 mt-1">"ควรเปลี่ยนทันที", "เห็นด้วยอย่างยิ่ง", "ลดภาระงาน"</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-red-700 mb-1"><span>Frustrated (อึดอัด/ไม่พอใจระบบเดิม)</span><span>15%</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill bg-red-500" style="width: 15%"></div></div>
+                                <p class="text-[10px] text-gray-400 mt-1">"เสียเวลาแก้", "เบื่อระบบ Error", "ทำงานซ้ำซ้อน"</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-orange-700 mb-1"><span>Concerned (กังวล/อนุรักษ์)</span><span>3%</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill bg-orange-500" style="width: 3%"></div></div>
+                                <p class="text-[10px] text-gray-400 mt-1">"กลัวเอกลักษณ์หาย", "ผู้ใหญ่ไม่ยอม"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase">Top Keywords Frequency</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="keyword-chip">OCR (120)</span>
+                            <span class="keyword-chip">Excel (95)</span>
+                            <span class="keyword-chip">Log File (88)</span>
+                            <span class="keyword-chip">Shift Key (76)</span>
+                            <span class="keyword-chip">สากล (65)</span>
+                            <span class="keyword-chip">เสียเวลา (58)</span>
+                            <span class="keyword-chip">Error (52)</span>
+                            <span class="keyword-chip">ระเบียบ (45)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7.2 Thematic Quotes -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Theme: Operational Pain -->
+                    <div>
+                        <h4 class="font-bold text-red-700 mb-2 flex items-center gap-2 text-sm uppercase">Theme A: Operational Pain (ความเจ็บปวดจากการปฏิบัติงาน)</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quote-card">
+                                <span class="material-symbols-outlined absolute top-2 right-2 text-gray-200 text-3xl">format_quote</span>
+                                <p class="text-sm italic text-gray-600 mb-2">"การพิมพ์เลขไทยบนแป้นพิมพ์มาตรฐานต้องกด Shift ค้างตลอดเวลา ทำให้ความเร็วในการพิมพ์ลดลงเฉลี่ย 20-30% และเมื่อยนิ้วมากเมื่อต้องพิมพ์เอกสารจำนวนมาก"</p>
+                                <div class="text-xs font-bold text-slate-400 text-right">- เจ้าหน้าที่ธุรการ</div>
+                            </div>
+                            <div class="quote-card">
+                                <span class="material-symbols-outlined absolute top-2 right-2 text-gray-200 text-3xl">format_quote</span>
+                                <p class="text-sm italic text-gray-600 mb-2">"ต้องเสียเวลามานั่งแก้เลขไทยเป็นอารบิกใน Excel ทุกครั้งก่อนทำกราฟ หรือคำนวณงบประมาณ ทำให้งานล่าช้าโดยใช่เหตุ"</p>
+                                <div class="text-xs font-bold text-slate-400 text-right">- นักวิเคราะห์นโยบาย</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme: Security Risks -->
+                    <div>
+                        <h4 class="font-bold text-orange-700 mb-2 flex items-center gap-2 text-sm uppercase">Theme B: Security &amp; Risk (ความเสี่ยงด้านความปลอดภัย)</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quote-card border-l-orange-500">
+                                <span class="material-symbols-outlined absolute top-2 right-2 text-gray-200 text-3xl">security</span>
+                                <p class="text-sm italic text-gray-600 mb-2">"ระบบ SIEM ไม่สามารถอ่าน Log Files ที่มี Timestamp เป็นเลขไทยได้ ทำให้เราพลาดการแจ้งเตือนภัยคุกคามที่สำคัญ (Missed Alerts)"</p>
+                                <div class="text-xs font-bold text-slate-400 text-right">- Cybersecurity Analyst</div>
+                            </div>
+                            <div class="quote-card border-l-orange-500">
+                                <span class="material-symbols-outlined absolute top-2 right-2 text-gray-200 text-3xl">security</span>
+                                <p class="text-sm italic text-gray-600 mb-2">"URL หรือ Domain Name ที่มีเลขไทยผสม ทำให้ผู้ใช้สับสนและเสี่ยงต่อการถูก Phishing ได้ง่าย เพราะแยกไม่ออกระหว่างเลขไทยกับอักขระพิเศษ"</p>
+                                <div class="text-xs font-bold text-slate-400 text-right">- Security Auditor</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme: Strategic Suggestions -->
+                    <div>
+                        <h4 class="font-bold text-blue-700 mb-2 flex items-center gap-2 text-sm uppercase">Theme C: Strategic Suggestions (ข้อเสนอแนะเชิงนโยบาย)</h4>
+                        <div class="bg-blue-50 rounded p-4 text-sm text-slate-700 border border-blue-100">
+                            <ul class="space-y-2 list-disc list-inside">
+                                <li>"ควรประกาศเป็น <strong>National Data Standard</strong> ให้ชัดเจนว่าฟิลด์ใดเป็น Machine Readable (อารบิก) และฟิลด์ใดเป็น Presentation (ไทย)"</li>
+                                <li>"ภาครัฐต้องจัดหา <strong>Tools สำหรับแปลงข้อมูล (Batch Converter)</strong> แจกฟรีให้หน่วยงานเล็กๆ ที่ไม่มีงบประมาณจ้าง Programmer"</li>
+                                <li>"ควรเริ่มบังคับใช้จากเอกสารที่เกิดใหม่ (Born Digital) ก่อน ส่วนเอกสารเก่าให้ทยอยปรับปรุงตามรอบอายุ"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Support Requirements -->
+        <section class="card" id="sec8">
+            <div class="section-header text-teal-700">
+                <div class="section-number bg-teal-600">8</div>
+                <h3 class="section-title">สิ่งที่ต้องการการสนับสนุน (Support Requirements Stats)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 border border-teal-100 rounded-xl bg-teal-50 hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-teal-600 mb-2">gavel</span>
+                    <div class="text-4xl font-bold text-slate-800 mb-1">94.4%</div>
+                    <div class="font-bold text-teal-800 text-sm uppercase tracking-wide">Legal Support</div>
+                    <p class="text-xs text-gray-500 mt-2 px-4">ต้องการกฎหมาย/ระเบียบรองรับที่ชัดเจนเพื่ออ้างอิง</p>
+                </div>
+                <div class="text-center p-6 border border-blue-100 rounded-xl bg-blue-50 hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-blue-600 mb-2">build</span>
+                    <div class="text-4xl font-bold text-slate-800 mb-1">78.3%</div>
+                    <div class="font-bold text-blue-800 text-sm uppercase tracking-wide">Technical Tools</div>
+                    <p class="text-xs text-gray-500 mt-2 px-4">ต้องการ Software แปลงข้อมูลกลางจากภาครัฐ</p>
+                </div>
+                <div class="text-center p-6 border border-purple-100 rounded-xl bg-purple-50 hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-purple-600 mb-2">menu_book</span>
+                    <div class="text-4xl font-bold text-slate-800 mb-1">65.0%</div>
+                    <div class="font-bold text-purple-800 text-sm uppercase tracking-wide">Guideline</div>
+                    <p class="text-xs text-gray-500 mt-2 px-4">ต้องการคู่มือปฏิบัติและการจำแนกประเภทเอกสาร</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Proposed Framework -->
+        <section class="card" id="sec9">
+            <div class="section-header text-slate-700">
+                <div class="section-number bg-slate-600">9</div>
+                <h3 class="section-title">กรอบมาตรฐานที่นำเสนอ (Proposed Framework Consensus)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Type 1 -->
+                <div class="border rounded-lg p-5 relative overflow-hidden group hover:border-green-400 transition-colors">
+                    <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl">98.3% Agree</div>
+                    <h4 class="font-bold text-lg mb-2 text-slate-800">Type 1: Digital Data</h4>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 rounded mb-3">Arabic 100%</span>
+                    <p class="text-xs text-gray-500 mb-3">ข้อมูลที่เครื่องคอมพิวเตอร์ต้องประมวลผล</p>
+                    <ul class="text-sm list-disc list-inside text-gray-700 space-y-1">
+                        <li>Database Fields</li>
+                        <li>Log Files &amp; Timestamp</li>
+                        <li>API &amp; JSON/XML</li>
+                    </ul>
+                </div>
+                <!-- Type 2 -->
+                <div class="border rounded-lg p-5 relative overflow-hidden group hover:border-yellow-400 transition-colors">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl">65.5% Agree</div>
+                    <h4 class="font-bold text-lg mb-2 text-slate-800">Type 2: General Doc</h4>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-0.5 rounded mb-3">Mixed / Contextual</span>
+                    <p class="text-xs text-gray-500 mb-3">เอกสารทั่วไปที่มนุษย์อ่านเป็นหลัก</p>
+                    <ul class="text-sm list-disc list-inside text-gray-700 space-y-1">
+                        <li>หนังสือราชการทั่วไป</li>
+                        <li>รายงานการประชุม</li>
+                        <li>เอกสารประชาสัมพันธ์</li>
+                    </ul>
+                </div>
+                <!-- Type 3 -->
+                <div class="border rounded-lg p-5 relative overflow-hidden group hover:border-blue-400 transition-colors">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl">92.1% Agree</div>
+                    <h4 class="font-bold text-lg mb-2 text-slate-800">Type 3: Ceremonial</h4>
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded mb-3">Thai 100%</span>
+                    <p class="text-xs text-gray-500 mb-3">เอกสารพิธีการสูงสุด/ประวัติศาสตร์</p>
+                    <ul class="text-sm list-disc list-inside text-gray-700 space-y-1">
+                        <li>ราชกิจจานุเบกษา</li>
+                        <li>ประกาศเกียรติคุณ</li>
+                        <li>พระราชกำหนด</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Core Principles -->
+        <section class="card" id="sec10">
+            <div class="section-header text-slate-700">
+                <div class="section-number bg-slate-600">10</div>
+                <h3 class="section-title">หลักการดิจิทัลภาครัฐ (Core Principles Statistics)</h3>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-slate-800">1. Machine Readable First</h4>
+                        <p class="text-xs text-slate-500">ข้อมูลต้องพร้อมประมวลผลด้วยคอมพิวเตอร์ก่อนเสมอ</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-2xl font-bold text-blue-600">97%</span>
+                        <span class="text-xs text-gray-400 block">Approval</span>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-slate-800">2. Separation of Concerns (Data vs UI)</h4>
+                        <p class="text-xs text-slate-500">เก็บข้อมูลเป็นสากล (Arabic) แต่เลือกแสดงผลหน้าจอเป็นไทยได้</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-2xl font-bold text-green-600">88%</span>
+                        <span class="text-xs text-gray-400 block">Approval</span>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-slate-800">3. Interoperability by Default</h4>
+                        <p class="text-xs text-slate-500">ต้องแลกเปลี่ยนข้อมูลได้ทันทีโดยไม่ต้องผ่านกระบวนการแปลงค่า</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-2xl font-bold text-purple-600">95%</span>
+                        <span class="text-xs text-gray-400 block">Approval</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Roadmap -->
+        <section class="card" id="sec11">
+            <div class="section-header text-slate-700">
+                <div class="section-number bg-slate-600">11</div>
+                <h3 class="section-title">แผนการดำเนินงาน (Implementation Roadmap)</h3>
+            </div>
+            <div class="relative border-l-2 border-slate-200 ml-4 space-y-8 py-2">
+                <div class="ml-6 relative">
+                    <span class="absolute -left-[33px] top-0 bg-blue-500 w-4 h-4 rounded-full border-2 border-white ring-2 ring-blue-100"></span>
+                    <h4 class="font-bold text-slate-800">Phase 1: Quick Win (0-6 เดือน)</h4>
+                    <p class="text-sm text-gray-600 mt-1">ประกาศนโยบาย "Digital First" และบังคับใช้กับระบบ Security Logs และ Database ใหม่ทั้งหมด</p>
+                </div>
+                <div class="ml-6 relative">
+                    <span class="absolute -left-[33px] top-0 bg-indigo-500 w-4 h-4 rounded-full border-2 border-white ring-2 ring-indigo-100"></span>
+                    <h4 class="font-bold text-slate-800">Phase 2: Standardization (6-18 เดือน)</h4>
+                    <p class="text-sm text-gray-600 mt-1">แจกจ่ายเครื่องมือ (Tools) แปลงข้อมูล และเริ่มปรับปรุงระบบสารบรรณอิเล็กทรอนิกส์ให้รองรับมาตรฐานใหม่</p>
+                </div>
+                <div class="ml-6 relative">
+                    <span class="absolute -left-[33px] top-0 bg-teal-500 w-4 h-4 rounded-full border-2 border-white ring-2 ring-teal-100"></span>
+                    <h4 class="font-bold text-slate-800">Phase 3: Transformation (18-24 เดือน)</h4>
+                    <p class="text-sm text-gray-600 mt-1">ระบบทั้งหมดเชื่อมโยงข้อมูลแบบ Machine Readable (Arabic) สมบูรณ์แบบ คงเหลือเลขไทยเฉพาะเอกสารพิธีการ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Conclusion -->
+        <section class="card bg-slate-900 text-white border-none" id="sec12">
+            <div class="section-header border-slate-700">
+                <div class="section-number bg-white text-slate-900">12</div>
+                <h3 class="section-title text-white">บทสรุปและข้อเสนอแนะ (Conclusion)</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
+                <p>
+                    ผลการสำรวจจากกลุ่มตัวอย่าง 180 ท่าน ชี้ชัดว่า <strong>"การใช้เลขไทยในระบบดิจิทัล" เป็นอุปสรรคสำคัญ (Critical Bottleneck)</strong> ต่อการพัฒนา Digital Government โดยเฉพาะในมิติของความมั่นคงปลอดภัย (Cybersecurity) และการเชื่อมโยงข้อมูล (Interoperability)
+                </p>
+                <p>
+                    ผู้ปฏิบัติงานกว่า <strong>95.6% สนับสนุนการเปลี่ยนแปลง</strong> ไปสู่มาตรฐานสากล (Arabic Numerals) โดยข้อมูลเชิงลึกระบุว่าอุปสรรคสำคัญไม่ได้อยู่ที่เทคโนโลยี แต่อยู่ที่ <strong>"ระเบียบและทัศนคติ" (4.82/5.00)</strong> ดังนั้น การแก้ปัญหาที่ตรงจุดที่สุดคือการออก <strong>"นโยบายระดับชาติ"</strong> ที่ชัดเจน เพื่อปลดล็อกข้อจำกัดเหล่านี้ พร้อมกับสนับสนุนเครื่องมือทางเทคนิคเพื่อลดภาระผู้ปฏิบัติงาน
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12 no-print">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500">Report Generated: <span id="dateDisplay">27 ธันวาคม 2568</span></p>
+            <p class="text-xs text-gray-400 mt-1">Data Source: law_survey_6364_25681226_180 - RawData.csv</p>
+        </div>
+    </footer>
+
+    <script>
+        // Date Setup
+        document.getElementById('dateDisplay').innerText = new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        // Chart Global Defaults
+        Chart.defaults.font.family = "'Sarabun', sans-serif";
+        Chart.defaults.color = '#64748b';
+
+        // 2. Demographic Chart (Pie)
+        new Chart(document.getElementById('demographicChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['ความมั่นคง (Security)', 'สาธารณสุข (Health)', 'เอกชน/อื่นๆ (Private)'],
+                datasets: [{ 
+                    data: [121, 8, 51], 
+                    backgroundColor: ['#3b82f6', '#0d9488', '#a855f7'], 
+                    hoverOffset: 4
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8 } } } 
+            }
+        });
+
+        // 3. Ecosystem Chart (Stacked Bar)
+        new Chart(document.getElementById('ecosystemChart'), {
+            type: 'bar',
+            data: {
+                labels: ['OCR', 'Excel', 'Database', 'API'],
+                datasets: [
+                    { label: 'Critical Failure', data: [96, 92, 88, 75], backgroundColor: '#ef4444' },
+                    { label: 'Minor Issues', data: [3, 6, 10, 20], backgroundColor: '#fb923c' },
+                    { label: 'No Issues', data: [1, 2, 2, 5], backgroundColor: '#22c55e' }
+                ]
+            },
+            options: { 
+                responsive: true, 
+                scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, max: 100 } }, 
+                plugins: { legend: { position: 'top', align: 'end' } } 
+            }
+        });
+
+        // 4. Impact Radar Chart
+        new Chart(document.getElementById('impactRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Cybersecurity', 'Interoperability', 'Data Integrity', 'Efficiency', 'UX/UI', 'Cost'],
+                datasets: [{
+                    label: 'Severity Score (1-10)',
+                    data: [9.8, 9.2, 8.7, 7.5, 6.5, 8.1],
+                    fill: true,
+                    backgroundColor: 'rgba(236, 72, 153, 0.2)',
+                    borderColor: 'rgb(236, 72, 153)',
+                    pointBackgroundColor: 'rgb(236, 72, 153)',
+                    pointBorderColor: '#fff'
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                scales: { r: { suggestedMin: 0, suggestedMax: 10, ticks: { stepSize: 2 } } } 
+            }
+        });
+
+        // 5. Pain Points Chart (Horizontal Bar)
+        new Chart(document.getElementById('painPointsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['OCR Failure', 'Excel Calc', 'Linkage', 'Security Logs', 'Typing Speed'],
+                datasets: [{
+                    label: 'Weighted Score (Max 100)',
+                    data: [98.5, 94.2, 89.7, 85.0, 72.4],
+                    backgroundColor: ['#b91c1c', '#ea580c', '#d97706', '#65a30d', '#2563eb'],
+                    borderRadius: 4
+                }]
+            },
+            options: { 
+                indexAxis: 'y', 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { legend: { display: false } },
+                scales: { x: { beginAtZero: true, max: 100 } }
+            }
+        });
+
+        function saveReport() {
+            let htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'law_survey_complete_report_v2.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+
+</body></html>
